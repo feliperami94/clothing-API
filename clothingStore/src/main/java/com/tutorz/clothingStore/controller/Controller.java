@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("api/v1/")
 public class Controller {
 
     @Autowired
@@ -20,22 +20,22 @@ public class Controller {
         return service.findAllBrands();
     }
 
-    @PostMapping("post/Brand")
+    @PostMapping("post/brand")
     public Brand postBrand(@RequestBody Brand brand){
         return service.createBrand(brand);
     }
 
-    @PostMapping("post/Garment")
+    @PostMapping("post/garment")
     public Brand postGarment(@RequestBody Garment garment){
         return service.createGarment(garment);
     }
 
-    @DeleteMapping("delete/Brand")
+    @DeleteMapping("delete/brand")
     public void deleteBrand(@RequestBody Brand brand){
         service.deleteBrand(brand);
     }
 
-    @DeleteMapping("delete/Garment")
+    @DeleteMapping("delete/garment")
     public void deleteGarment(@RequestBody Garment garment){
         service.deleteGarment(garment);
     }

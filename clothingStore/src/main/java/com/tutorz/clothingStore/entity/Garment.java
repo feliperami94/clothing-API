@@ -17,6 +17,4 @@ public class Garment {
     private String color;
     private Long fkBrandId;
 
-
-
 }
